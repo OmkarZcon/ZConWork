@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstateApp", "RealEstateApp\RealEstateApp.csproj", "{18D00453-12C5-498E-91B1-1DE7E5E1D07B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OOPTaskDay2", "OOPTaskDay2\OOPTaskDay2.csproj", "{F87AC7AD-4610-463F-BA45-CB3D003A0DAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18D00453-12C5-498E-91B1-1DE7E5E1D07B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18D00453-12C5-498E-91B1-1DE7E5E1D07B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18D00453-12C5-498E-91B1-1DE7E5E1D07B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18D00453-12C5-498E-91B1-1DE7E5E1D07B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F87AC7AD-4610-463F-BA45-CB3D003A0DAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F87AC7AD-4610-463F-BA45-CB3D003A0DAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F87AC7AD-4610-463F-BA45-CB3D003A0DAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F87AC7AD-4610-463F-BA45-CB3D003A0DAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
