@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace RealEstate.Api.Services
+﻿namespace RealEstate.Api.Services
 {
     public class BrandService : IBrandService
     {

@@ -1,10 +1,6 @@
 ﻿using OOPTaskDay2;
 namespace RealEstate.Core.models;
 
-public class InvalidPriceException : Exception
-{
-    public InvalidPriceException(string message) : base(message) { }
-}
 
 
 class Program
@@ -12,7 +8,6 @@ class Program
 
 {
 
-  
     static void Main()
     {
 
@@ -37,7 +32,7 @@ class Program
             Console.Write("Enter Address: ");
             string address = Console.ReadLine();
 
-
+            
 
 
 

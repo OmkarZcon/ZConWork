@@ -6,6 +6,9 @@ class Program
     {
         var repository = new ProductRepository();
 
+       
+
+
         // Add products
         repository.AddProduct("Laptop");
         repository.AddProduct("Smartphone");

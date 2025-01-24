@@ -1,7 +1,4 @@
-﻿using System;
-using System.IO;
-
-namespace OOPTaskDay2
+﻿namespace OOPTaskDay2
 {
     public static class FileLogger
     {

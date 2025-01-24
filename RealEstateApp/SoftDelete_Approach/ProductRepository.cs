@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-public class ProductRepository
+﻿public class ProductRepository
 {
     private static List<Product> _products = new List<Product>();
     private static int _nextId = 1;
@@ -79,3 +76,5 @@ public class ProductRepository
         return $"PRODUCT-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}";
     }
 }
+
+

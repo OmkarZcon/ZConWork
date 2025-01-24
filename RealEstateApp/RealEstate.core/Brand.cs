@@ -9,7 +9,7 @@
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow; // Audit column
         public DateTime UpdatedAt { get; set; } = DateTime.UtcNow; // Audit column
         public DateTime DeletedAt { get; set; }
-        public object Id { get; set; }
+       
 
         // Method to print brand details
         public void GetDetails()
