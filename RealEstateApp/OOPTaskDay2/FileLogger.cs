@@ -2,7 +2,7 @@
 {
     public static class FileLogger
     {
-        private static readonly string LogFilePath = "C:\\Users\\OmkarB\\source\\repos\\OOPTaskDay2\\log.txt";
+        private static readonly string LogFilePath = "log.txt";
 
 
         public static void Log(string message)

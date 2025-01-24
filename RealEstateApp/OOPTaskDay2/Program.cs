@@ -141,6 +141,12 @@ class Program
         Console.Write("\nEnter the minimum price to filter properties: ");
         decimal minPrice = decimal.Parse(Console.ReadLine());
 
+
+
+
+
+
+        // Filter properties by price -- LINQ
         var filteredProperties = properties.Where(p => p.Price >= minPrice);
 
         Console.WriteLine($"\nProperties with price >= {minPrice:C}:");
