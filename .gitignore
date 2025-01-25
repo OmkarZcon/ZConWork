@@ -16,6 +16,10 @@
 # Mono auto generated files
 mono_crash.*
 
+App.config
+log.txt
+
+
 # Build results
 [Dd]ebug/
 [Dd]ebugPublic/

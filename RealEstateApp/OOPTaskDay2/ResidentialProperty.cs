@@ -2,14 +2,14 @@
 {
     public class ResidentialProperty : Property
     {
-             public ResidentialProperty(int propertyId, string address, decimal price) : base(propertyId, address, price)
+             public ResidentialProperty( string address, decimal price) : base( address, price)
         {
 
         }
 
         public override string GetDetails()
         {
-            return $"Residential Property - Address: {Address}, Price: {Price:C}";
+            return $"Residential Property - PropertyId: {PropertyId}, Address: {Address}, Price: {Price:C}";
         }
     }
 }

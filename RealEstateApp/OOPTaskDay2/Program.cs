@@ -1,17 +1,12 @@
 ﻿using OOPTaskDay2;
 namespace RealEstate.Core.models;
 
-
-
 class Program
 
 
 {
-
     static void Main()
     {
-
-
 
         // Create lists to store properties
         List<Property> properties = new List<Property>();
@@ -26,9 +21,7 @@ class Program
             Console.Write("Enter property type (1 for Residential, 2 for Commercial): ");
             int propertyType = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter Property ID: ");
-            int propertyId = int.Parse(Console.ReadLine());
-
+           
             Console.Write("Enter Address: ");
             string address = Console.ReadLine();
 
@@ -78,11 +71,11 @@ class Program
             Property property;
             if (propertyType == 1)
             {
-                property = new ResidentialProperty(propertyId, address, price);
+                property = new ResidentialProperty( address, price);
             }
             else
             {
-                property = new CommercialProperty(propertyId, address, price);
+                property = new CommercialProperty( address, price);
             }
 
             // Add to list
