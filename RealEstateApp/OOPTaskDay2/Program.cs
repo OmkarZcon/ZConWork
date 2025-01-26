@@ -1,22 +1,12 @@
 ﻿using OOPTaskDay2;
 namespace RealEstate.Core.models;
 
-public class InvalidPriceException : Exception
-{
-    public InvalidPriceException(string message) : base(message) { }
-}
-
-
 class Program
 
 
 {
-
-
     static void Main()
     {
-
-
 
         // Create lists to store properties
         List<Property> properties = new List<Property>();
@@ -31,21 +21,19 @@ class Program
             Console.Write("Enter property type (1 for Residential, 2 for Commercial): ");
             int propertyType = int.Parse(Console.ReadLine());
 
-            Console.Write("Enter Property ID: ");
-            int propertyId = int.Parse(Console.ReadLine());
-
+           
             Console.Write("Enter Address: ");
             string address = Console.ReadLine();
 
-
+            
 
 
 
 
             // Exception Handling for Price
             decimal price;
-
-            try
+             
+            try 
             {
                 Console.Write("Enter Price: ");
                 price = decimal.Parse(Console.ReadLine());
@@ -57,7 +45,7 @@ class Program
             }
             catch (FormatException ex)
             {
-
+                
                 FileLogger.Log($"FormatException Caught: {ex.Message}");
                 FileLogger.Log($"Stack Trace: {ex.StackTrace}");
 
@@ -67,11 +55,11 @@ class Program
             }
             catch (InvalidPriceException ex)
             {
-
+               
                 FileLogger.Log($"InvalidPriceException Caught: {ex.Message}");
                 FileLogger.Log($"Stack Trace: {ex.StackTrace}");
 
-                Console.WriteLine("Enter number greater than 0");
+                Console.WriteLine("Enter number greater than 0"); 
                 i--;
                 continue;
             }
@@ -83,11 +71,11 @@ class Program
             Property property;
             if (propertyType == 1)
             {
-                property = new ResidentialProperty(propertyId, address, price);
+                property = new ResidentialProperty( address, price);
             }
             else
             {
-                property = new CommercialProperty(propertyId, address, price);
+                property = new CommercialProperty( address, price);
             }
 
             // Add to list
@@ -113,7 +101,7 @@ class Program
             decimal propertyTax;
 
             PropertyTaxCalculator.CalculateTax(ref propertyPrice, out propertyTax);
-
+            
             var taxDetails = propertyPrinter.PrintTaxDetails(propertyPrice, propertyTax);
             Console.WriteLine(taxDetails);
             Console.WriteLine("------------------------");
@@ -146,6 +134,12 @@ class Program
         Console.Write("\nEnter the minimum price to filter properties: ");
         decimal minPrice = decimal.Parse(Console.ReadLine());
 
+
+
+
+
+
+        // Filter properties by price -- LINQ
         var filteredProperties = properties.Where(p => p.Price >= minPrice);
 
         Console.WriteLine($"\nProperties with price >= {minPrice:C}:");
@@ -156,7 +150,7 @@ class Program
 
 
 
-        // Grouping properties by type
+        // Grouping properties by type -- LINQ
         var groupedProperties = properties.GroupBy(p => p.GetType().Name);
 
         Console.WriteLine("\nProperties grouped by type:");
@@ -165,7 +159,7 @@ class Program
             Console.WriteLine($"\n{group.Key}:");
             foreach (var property in group)
             {
-                Console.WriteLine($"  - {property.Address}, Price: {property.Price:C}");
+                Console.WriteLine($"   {property.Address}, Price: {property.Price:C}");
             }
         }
 

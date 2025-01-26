@@ -3,14 +3,14 @@
     public abstract class Property
     {
 
-        public int PropertyId { get; set; }
+        public  Guid PropertyId { get; set; }
         public string Address { get; set; }
         public decimal Price { get; set; }
 
 
-        public Property(int propertyId, string address, decimal price)
+        public Property( string address, decimal price)
         {
-            PropertyId = propertyId;
+            PropertyId = Guid.NewGuid();
             Address = address;
             Price = price;
         }
