@@ -2,11 +2,11 @@
 namespace RealEstate.Core.models;
 
 class Program
-
-
 {
     static void Main()
     {
+
+
 
         // Create lists to store properties
         List<Property> properties = new List<Property>();
@@ -25,12 +25,7 @@ class Program
             Console.Write("Enter Address: ");
             string address = Console.ReadLine();
 
-            
-
-
-
-
-            // Exception Handling for Price
+           // Exception Handling for Price
             decimal price;
              
             try 
