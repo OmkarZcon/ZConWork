@@ -1,4 +1,8 @@
-﻿namespace OOPTaskDay2
+﻿using System;
+using System.IO;
+using System.Configuration;
+
+namespace OOPTaskDay2
 {
     public static class FileLogger
     {
@@ -6,6 +10,26 @@
         {
             try
             {
+                // Retrieve the log directory path from App.config
+                string logDirectory = ConfigurationManager.AppSettings["logPath"];
+
+
+                // Expand environment variables (e.g., %APPDATA%)
+                logDirectory = Environment.ExpandEnvironmentVariables(logDirectory);
+
+
+                // Ensure the directory exists
+                if (!Directory.Exists(logDirectory))
+                {
+                    Directory.CreateDirectory(logDirectory);
+                }
+
+
+                // Generate log file name in YYYYMMDD.txt format
+                string logFileName = $"{DateTime.Now:yyyyMMdd}.txt";
+                string logFilePath = Path.Combine(logDirectory, logFileName);
+
+
                 // Write the message to the log file with a timestamp
                 File.AppendAllText(logFilePath, $"{DateTime.Now:yyyy-MM-dd HH:mm:ss}: {message}{Environment.NewLine}");
             }
