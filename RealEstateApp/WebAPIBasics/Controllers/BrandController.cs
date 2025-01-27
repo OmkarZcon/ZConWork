@@ -19,6 +19,13 @@ public class BrandController : ControllerBase
         return Ok(brands);
     }
 
+    [HttpGet("GetBrandById/{id}")]
+    public IActionResult GetBrandById(int id)
+    {
+        var brand = _brandService.GetBrandById(id);
+        return CreatedAtAction(nameof(GetBrandById), brand);
+    }
+
     [HttpPost("CreateBrand")]
     public IActionResult CreateBrand([FromBody] string brandName)
     {
