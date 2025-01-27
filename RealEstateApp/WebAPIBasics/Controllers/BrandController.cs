@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿﻿using Microsoft.AspNetCore.Mvc;
 using RealEstate.Api.Services;
 
 [Route("api/[controller]")]
@@ -17,6 +17,16 @@ public class BrandController : ControllerBase
     {
         var brands = _brandService.GetAllBrands();
         return Ok(brands);
+    }
+
+    [HttpGet("GetBrandById/{id}")]
+    public IActionResult GetBrandById(int id)
+    {
+        var brand = _brandService.GetBrandById(id);
+        if (brand == null)
+            return NotFound();
+
+        return Ok(brand);
     }
 
     [HttpPost("CreateBrand")]

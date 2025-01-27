@@ -2,7 +2,7 @@
 using System.IO;
 using System.Configuration;
 
-namespace OOPTaskDay2
+namespace RealEstate.core
 {
     public static class FileLogger
     {

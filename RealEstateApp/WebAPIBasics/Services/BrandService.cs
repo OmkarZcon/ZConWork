@@ -9,6 +9,14 @@
             return _brands;
         }
 
+        public string GetBrandById(int id)
+        {
+            if (id < 0 || id >= _brands.Count)
+                return null;
+
+            return _brands[id];
+        }
+
         public string CreateBrand(string brandName)
         {
             _brands.Add(brandName);

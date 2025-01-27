@@ -1,4 +1,6 @@
-﻿using OOPTaskDay2;
+﻿using System.ComponentModel.DataAnnotations;
+using OOPTaskDay2;
+using RealEstate.core;
 namespace RealEstate.Core.models;
 
 class Program
@@ -30,6 +32,8 @@ class Program
              
             try 
             {
+
+
                 Console.Write("Enter Price: ");
                 price = decimal.Parse(Console.ReadLine());
 
@@ -75,10 +79,12 @@ class Program
 
             // Add to list
             properties.Add(property);
+
+
+
+
+
         }
-
-
-
         // Create printer object
         var propertyPrinter = new PropertyPrinter();
 
@@ -161,8 +167,22 @@ class Program
 
 
     }
-}
 
+
+    public static void ValidateAndThrow(object model)
+    {
+        var context = new ValidationContext(model);
+        var results = new List<ValidationResult>();
+        var isValid = Validator.TryValidateObject(model, context, results, true);
+
+        if (!isValid)
+        {
+            // Collect all error messages
+            var errorMessages = string.Join(Environment.NewLine, results.ConvertAll(result => result.ErrorMessage));
+            throw new Exception(errorMessages);
+        }
+    }
+}
 
 public class PropertyPrinter
 {
@@ -176,3 +196,4 @@ public class PropertyPrinter
         return $"Updated Price: {price:C}, Tax Amount: {tax:C}";
     }
 }
+
