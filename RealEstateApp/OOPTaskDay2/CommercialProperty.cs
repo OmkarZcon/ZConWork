@@ -1,7 +1,4 @@
-﻿using System.Diagnostics;
-using System.Net;
-
-namespace RealEstate.Core.models
+﻿namespace RealEstate.Core.models
 {
     public class CommercialProperty : Property
     {

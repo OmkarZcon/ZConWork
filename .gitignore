@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/RealEstateApp/OOPTaskDay2/App.config
+/RealEstateApp/OOPTaskDay2/log.txt

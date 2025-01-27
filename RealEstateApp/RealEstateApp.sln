@@ -11,6 +11,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLIDTaskDay3", "SOLIDTaskD
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.core", "RealEstate.core\RealEstate.core.csproj", "{4462F7BB-8F80-4E69-A6F9-76C6454B1C05}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Api", "WebAPIBasics\RealEstate.Api.csproj", "{D640EA32-118D-4E05-BE01-6EF7B7041B18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftDelete_Approach", "SoftDelete_Approach\SoftDelete_Approach.csproj", "{B3DB2DA4-E754-4F70-B730-8840FE551D06}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +37,14 @@ Global
 		{4462F7BB-8F80-4E69-A6F9-76C6454B1C05}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4462F7BB-8F80-4E69-A6F9-76C6454B1C05}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4462F7BB-8F80-4E69-A6F9-76C6454B1C05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D640EA32-118D-4E05-BE01-6EF7B7041B18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D640EA32-118D-4E05-BE01-6EF7B7041B18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D640EA32-118D-4E05-BE01-6EF7B7041B18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D640EA32-118D-4E05-BE01-6EF7B7041B18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

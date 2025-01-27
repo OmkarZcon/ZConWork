@@ -1,7 +1,4 @@
-﻿using RealEstateApp.Models;
-using RealEstate.Core.models;
-using System;
-using RealEstate.core;
+﻿using RealEstate.core;
 class Program
 {
     static void Main(string[] args)
@@ -75,3 +72,14 @@ class Program
         }
     }
 }
+
+
+
+//Brand brandi = new Brand();
+//brandi.GetDetails();
+
+
+//Agency agent = new Agency();
+//agent.GetDetails();
+
+

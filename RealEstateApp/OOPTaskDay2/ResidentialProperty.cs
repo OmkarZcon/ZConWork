@@ -1,15 +1,11 @@
-﻿using System.Diagnostics;
-using System.Net;
-
-namespace RealEstate.Core.models
+﻿namespace RealEstate.Core.models
 {
     public class ResidentialProperty : Property
     {
-
-        public ResidentialProperty(int propertyId, string address, decimal price) : base(propertyId, address, price)
+             public ResidentialProperty(int propertyId, string address, decimal price) : base(propertyId, address, price)
         {
-        }
 
+        }
 
         public override string GetDetails()
         {

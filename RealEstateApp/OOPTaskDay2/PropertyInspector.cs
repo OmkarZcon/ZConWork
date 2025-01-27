@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using OOPTaskDay2;
 
 namespace RealEstate.Core.models
 {
