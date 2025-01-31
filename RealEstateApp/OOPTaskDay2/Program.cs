@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using OOPTaskDay2;
 using RealEstate.core;
+using Serilog;
 namespace RealEstate.Core.models;
 
 class Program
@@ -17,9 +18,9 @@ class Program
         int propertyCount = int.Parse(Console.ReadLine());
 
         // Input loop for properties
-        for (int i = 0; i < propertyCount; i++)
+        for (int counter = 0; counter < propertyCount; counter++)
         {
-            Console.WriteLine($"\nProperty #{i + 1}");
+            Console.WriteLine($"\nProperty #{ + 1}");
             Console.Write("Enter property type (1 for Residential, 2 for Commercial): ");
             int propertyType = int.Parse(Console.ReadLine());
 
@@ -29,11 +30,8 @@ class Program
 
            // Exception Handling for Price
             decimal price;
-             
-            try 
+            try
             {
-
-
                 Console.Write("Enter Price: ");
                 price = decimal.Parse(Console.ReadLine());
 
@@ -44,22 +42,16 @@ class Program
             }
             catch (FormatException ex)
             {
-                
-                FileLogger.Log($"FormatException Caught: {ex.Message}");
-                FileLogger.Log($"Stack Trace: {ex.StackTrace}");
-
+                Log.Error(ex, "Invalid price format. Please enter a valid number.");
                 Console.WriteLine("Invalid price. Please enter a valid number.");
-                i--;
+                counter--;
                 continue;
             }
             catch (InvalidPriceException ex)
             {
-               
-                FileLogger.Log($"InvalidPriceException Caught: {ex.Message}");
-                FileLogger.Log($"Stack Trace: {ex.StackTrace}");
-
-                Console.WriteLine("Enter number greater than 0"); 
-                i--;
+                Log.Error(ex, "Price must be greater than 0.");
+                Console.WriteLine("Enter a number greater than 0.");
+                counter--; 
                 continue;
             }
 
