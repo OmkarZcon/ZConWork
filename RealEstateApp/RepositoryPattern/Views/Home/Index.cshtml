@@ -1,0 +1,22 @@
+﻿@model IEnumerable<RepositoryPattern.Models.Brand>
+
+<h2>Brands</h2>
+<a href="/Brand/AddBrand">Add Brand</a>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Actions</th>
+    </tr>
+    @foreach (var brand in Model)
+    {
+        <tr>
+            <td>@brand.BrandId</td>
+            <td>@brand.BrandName</td>
+            <td>
+                <a href="/Brand/EditBrand/@brand.BrandId">Edit</a> |
+                <a href="/Brand/DeleteBrand/@brand.BrandId">Delete</a>
+            </td>
+        </tr>
+    }
+</table>
