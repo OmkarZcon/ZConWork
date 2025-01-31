@@ -1,0 +1,10 @@
+﻿@model RepositoryPattern.Models.Brand
+
+<h2>Brand Details</h2>
+
+<p><strong>ID:</strong> @Model.BrandId</p>
+<p><strong>Name:</strong> @Model.BrandName</p>
+
+<a href="@Url.Action("Index", "Brand")" class="btn btn-secondary">Back to List</a>
+<a href="@Url.Action("EditBrand", "Brand", new { id = Model.BrandId })" class="btn btn-warning">Edit</a>
+<a href="@Url.Action("DeleteBrand", "Brand", new { id = Model.BrandId })" class="btn btn-danger">Delete</a>
