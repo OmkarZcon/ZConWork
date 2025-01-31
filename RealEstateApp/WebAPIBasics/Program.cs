@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Diagnostics;
 using RealEstate.Api;
 using RealEstate.Api.Services;
+using Sieve.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,7 @@ builder.Services.AddScoped<IExceptionHandler, AppExceptionHandler>(); // Registe
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSingleton<SieveProcessor>();
 
 var app = builder.Build();
 

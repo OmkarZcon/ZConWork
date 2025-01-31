@@ -1,7 +1,7 @@
 ﻿﻿using Microsoft.AspNetCore.Mvc;
 using RealEstate.Api.Services;
 
-[Route("api/[controller]")]
+[Route("api/v1/brand-management/[controller]")]
 [ApiController]
 public class BrandController : ControllerBase
 {
@@ -12,14 +12,14 @@ public class BrandController : ControllerBase
         _brandService = brandService;
     }
 
-    [HttpGet("GetAllBrands")]
+    [HttpGet("getall")]
     public IActionResult GetAllBrands()
     {
         var brands = _brandService.GetAllBrands();
         return Ok(brands);
     }
 
-    [HttpGet("GetBrandById/{id}")]
+    [HttpGet("getbyid/{id}")]
     public IActionResult GetBrandById(int id)
     {
         var brand = _brandService.GetBrandById(id);
@@ -29,14 +29,14 @@ public class BrandController : ControllerBase
         return Ok(brand);
     }
 
-    [HttpPost("CreateBrand")]
+    [HttpPost("create")]
     public IActionResult CreateBrand([FromBody] string brandName)
     {
         var brand = _brandService.CreateBrand(brandName);
         return CreatedAtAction(nameof(GetAllBrands), brand);
     }
 
-    [HttpPut("UpdateBrand/{id}")]
+    [HttpPut("update/{id}")]
     public IActionResult UpdateBrand(int id, [FromBody] string brandName)
     {
         var updatedBrand = _brandService.UpdateBrand(id, brandName);
@@ -45,7 +45,7 @@ public class BrandController : ControllerBase
         return Ok(updatedBrand);
     }
 
-    [HttpDelete("DeleteBrand/{id}")]
+     [HttpDelete("delete/{id}")]
     public IActionResult DeleteBrand(int id)
     {
         var success = _brandService.DeleteBrand(id);
