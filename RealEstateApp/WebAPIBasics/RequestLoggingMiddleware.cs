@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using RealEstate.core;
-using System.Threading.Tasks;
+﻿using RealEstate.core;
 
 
 // Namespace for FileLogger
