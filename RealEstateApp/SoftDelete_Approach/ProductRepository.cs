@@ -1,7 +1,11 @@
-﻿public class ProductRepository
+﻿using RealEstate.core;
+
+public class ProductRepository
 {
     private static List<Product> _products = new List<Product>();
     private static int _nextId = 1;
+
+
 
     // Add a product
     public void AddProduct(string name)
@@ -10,7 +14,7 @@
         {
             Id = _nextId++,
             Name = name,
-            UniqueCode = GenerateUniqueCode(name),
+            UniqueCode = CodeGenerator.GenerateUniqueCode(),
             IsDeleted = false,
             CreatedAt = DateTime.UtcNow
         };
@@ -70,11 +74,8 @@
         }
     }
 
-    // Generate a unique code
-    private string GenerateUniqueCode(string name)
-    {
-        return $"PRODUCT-{Guid.NewGuid().ToString().Substring(0, 8).ToUpper()}";
-    }
+   
+    
 }
 
 
