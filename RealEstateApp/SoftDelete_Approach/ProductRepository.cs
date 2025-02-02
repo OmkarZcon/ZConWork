@@ -5,6 +5,14 @@ public class ProductRepository
     private static List<Product> _products = new List<Product>();
     private static int _nextId = 1;
 
+    private readonly int _codeLength;
+
+    // Constructor to accept configurable CodeLength
+    public ProductRepository(int codeLength)
+    {
+        _codeLength = codeLength;
+    }
+
 
 
     // Add a product
@@ -14,7 +22,7 @@ public class ProductRepository
         {
             Id = _nextId++,
             Name = name,
-            UniqueCode = CodeGenerator.GenerateUniqueCode(),
+            UniqueCode = CodeGenerator.GenerateUniqueCode(_codeLength),
             IsDeleted = false,
             CreatedAt = DateTime.UtcNow
         };
