@@ -1,31 +1,57 @@
-﻿class Program
+﻿using System;
+
+class Program
 {
     static void Main(string[] args)
     {
         var repository = new ProductRepository();
+        var addProductService = new AddProductService();
+        var softDeleteService = new SoftDeleteProductService();
 
-       
+        while (true)
+        {
+            Console.WriteLine("\n--- Product Repository Menu ---");
+            Console.WriteLine("1. Add Product");
+            Console.WriteLine("2. Display All Active Products");
+            Console.WriteLine("3. Soft Delete Product");
+            Console.WriteLine("4. Display Soft-Deleted Products");
+            Console.WriteLine("5. Exit");
+            Console.Write("Select an option (1-5): ");
 
+            if (!int.TryParse(Console.ReadLine(), out int choice))
+            {
+                Console.WriteLine("Invalid input. Please enter a number between 1 and 5.");
+                continue;
+            }
 
-        // Add products
-        repository.AddProduct("Laptop");
-        repository.AddProduct("Smartphone");
-        repository.AddProduct("Tablet");
+            switch (choice)
+            {
+                case 1:
+                    addProductService.AddProduct(repository);
+                    break;
 
-        // Display all active products
-        Console.WriteLine("\n-- Displaying all active products --");
-        repository.GetAllProducts();
+                case 2:
+                    repository.GetAllProducts();
+                    break;
 
-        // Soft delete a product
-        Console.WriteLine("\n-- Soft deleting Product with Id 1 --");
-        repository.DeleteProduct(1);
+                case 3:
+                    softDeleteService.SoftDeleteProduct(repository);
+                    break;
 
-        // Display all active products after deletion
-        Console.WriteLine("\n-- Displaying all active products after deletion --");
-        repository.GetAllProducts();
+                case 4:
+                    repository.GetDeletedProducts();
+                    break;
 
-        // Display all soft-deleted products
-        Console.WriteLine("\n-- Displaying soft-deleted products --");
-        repository.GetDeletedProducts();
+                case 5:
+                    Console.WriteLine("Exiting program. Goodbye!");
+                    return;
+
+                default:
+                    Console.WriteLine("Invalid option. Please try again.");
+                    break;
+            }
+        }
     }
+
+   
 }

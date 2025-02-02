@@ -15,6 +15,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Api", "WebAPIBas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftDelete_Approach", "SoftDelete_Approach\SoftDelete_Approach.csproj", "{B3DB2DA4-E754-4F70-B730-8840FE551D06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryPattern", "RepositoryPattern\RepositoryPattern.csproj", "{5CBAA545-A095-4A2A-9DE3-6F7D258AA83B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pagination", "Pagination\Pagination.csproj", "{089E4D2F-61CF-4FBD-B014-DB209ECDE030}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RealEstate.Functions", "RealEstate.Functions\RealEstate.Functions.csproj", "{D91E874A-26E4-4F26-842D-4F72BF72BB6F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTableStorage.Functions", "AzureTableStorage.Functions\AzureTableStorage.Functions.csproj", "{5527AFEE-E3E8-4322-B287-9434CC8DCA22}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +53,22 @@ Global
 		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3DB2DA4-E754-4F70-B730-8840FE551D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CBAA545-A095-4A2A-9DE3-6F7D258AA83B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CBAA545-A095-4A2A-9DE3-6F7D258AA83B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CBAA545-A095-4A2A-9DE3-6F7D258AA83B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CBAA545-A095-4A2A-9DE3-6F7D258AA83B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089E4D2F-61CF-4FBD-B014-DB209ECDE030}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089E4D2F-61CF-4FBD-B014-DB209ECDE030}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089E4D2F-61CF-4FBD-B014-DB209ECDE030}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{089E4D2F-61CF-4FBD-B014-DB209ECDE030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D91E874A-26E4-4F26-842D-4F72BF72BB6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D91E874A-26E4-4F26-842D-4F72BF72BB6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D91E874A-26E4-4F26-842D-4F72BF72BB6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D91E874A-26E4-4F26-842D-4F72BF72BB6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5527AFEE-E3E8-4322-B287-9434CC8DCA22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5527AFEE-E3E8-4322-B287-9434CC8DCA22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5527AFEE-E3E8-4322-B287-9434CC8DCA22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5527AFEE-E3E8-4322-B287-9434CC8DCA22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
