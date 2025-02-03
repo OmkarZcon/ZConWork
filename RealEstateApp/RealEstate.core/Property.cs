@@ -1,16 +1,24 @@
-﻿namespace RealEstate.Core.models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace RealEstate.Core.models
 {
     public abstract class Property
     {
 
-        public int PropertyId { get; set; }
+        public  Guid PropertyId { get; set; }
+      
+        
         public string Address { get; set; }
+
+
+        [Required(ErrorMessage = "Price is required.")]
+        [Range(1, 99999999, ErrorMessage = "Price must be between 1 and 99,999,999.")]
         public decimal Price { get; set; }
 
 
-        public Property(int propertyId, string address, decimal price)
+        public Property( string address, decimal price)
         {
-            PropertyId = propertyId;
+            PropertyId = Guid.NewGuid();
             Address = address;
             Price = price;
         }

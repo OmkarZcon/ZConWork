@@ -8,10 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Configuration.ConfigurationManager" Version="9.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\RealEstate.core\RealEstate.core.csproj" />
   </ItemGroup>
 
