@@ -16,12 +16,13 @@ class Program
         Console.Write("\nEnter the number of agencies to add: ");
         int agencyCount = int.Parse(Console.ReadLine());
 
-        // Input agencies
-        for (int i = 0; i < agencyCount; i++)
+        var agencyIndices = Enumerable.Range(1, agencyCount);
+
+        foreach (var index in agencyIndices)
         {
-            Console.WriteLine($"\nEnter details for Agency #{i + 1}:");
+            Console.WriteLine($"\nEnter details for Agency #{index}:");
             Console.Write("Agency Name: ");
-            string agencyName = Console.ReadLine(); // Get agency name from user input
+            string agencyName = Console.ReadLine();
 
             Console.Write("Agency Pincode: ");
             string agencyPincode = Console.ReadLine();
